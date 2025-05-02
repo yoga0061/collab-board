@@ -1,0 +1,507 @@
+/* App.css */
+
+/* General Styles */
+body, html {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Root Styles */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Content */
+.content {
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+.navbar-logo .logo-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-search {
+  display: flex;
+  align-items: center;
+  background-color: #2e2e2e;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-search input {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-icon {
+  margin-left: 0.5rem;
+}
+
+/* Login Form Styles */
+.login-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.login-form h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #ffeb3b;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffeb3b;
+  color: #1e1e1e;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #e0d32c;
+}
+
+.login-form .show-password,
+.login-form .forgot-password {
+  text-align: right;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-form .show-password:hover,
+.login-form .forgot-password:hover {
+  color: #ffeb3b;
+  text-decoration: underline;
+}
+
+.login-form .sign-up-link {
+  margin-top: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-form .sign-up-link:hover {
+  color: #ffeb3b;
+  text-decoration: underline;
+}
+
+/* Profile Section */
+.profile-section {
+  position: relative;
+  text-align: right;
+  margin-bottom: 2rem;
+}
+
+.profile-btn {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-btn:hover {
+  background-color: #555;
+}
+
+.profile-icon {
+  font-size: 1.5rem;
+}
+
+.profile-details {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.profile-details h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.profile-details p {
+  margin-bottom: 0.5rem;
+}
+
+.profile-details button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffeb3b;
+  color: #1e1e1e;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-details button:hover {
+  background-color: #e0d32c;
+}
+
+/* Profile Form Styles */
+.profile-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.profile-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.profile-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.profile-form input:focus {
+  border-color: #ffeb3b;
+}
+
+.profile-form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffeb3b;
+  color: #1e1e1e;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-form button:hover {
+  background-color: #e0d32c;
+}
+
+/* Post Form Styles */
+.post-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.post-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  height: 100px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.post-form textarea:focus {
+  border-color: #ffeb3b;
+}
+
+.post-form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffeb3b;
+  color: #1e1e1e;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-form button:hover {
+  background-color: #e0d32c;
+}
+
+.post-form .close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.contact-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  height: 100px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form textarea:focus {
+  border-color: #ffeb3b;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffeb3b;
+  color: #1e1e1e;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e0d32c;
+}
+
+.contact-form .close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Post Container */
+.post-container {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #d3d3d3;
+  max-width: 800px;
+  margin: 20px auto;
+  transition: transform 0.3s ease;
+}
+
+.post-container:hover {
+  transform: scale(1.02);
+}
+
+.post-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffeb3b;
+  margin-bottom: 10px;
+}
+
+.post-date {
+  font-size: 0.875rem;
+  color: #9e9e9e;
+  margin-bottom: 10px;
+}
+
+.post-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.post-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.post-link {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.post-link:hover {
+  color: #1e88e5;
+  text-decoration: underline;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.post-actions button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.post-actions button:hover {
+  color: #ffeb3b;
+}
+
+/* Post Button */
+.post-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffeb3b;
+  color: #1e1e1e;
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.post-btn:hover {
+  background-color: #e0d32c;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #1e1e1e;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #333;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar-search input {
+    width: 100%;
+  }
+
+  .post-container {
+    padding: 15px;
+    margin: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo .logo-link {
+    font-size: 1.2rem;
+  }
+
+  .login-form, .profile-form, .post-form, .contact-form {
+    padding: 1.5rem;
+  }
+
+  .post-container {
+    padding: 10px;
+    margin: 10px;
+  }
+}
