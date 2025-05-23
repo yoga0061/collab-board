@@ -611,25 +611,6 @@ function App() {
     setIsSignup(false);
   };
 
-  useEffect(() => {
-    const deleteOldPosts = async () => {
-      const tenDaysAgo = new Date();
-      tenDaysAgo.setDate(tenDaysAgo.getDate() - 10);
-
-      const postsQuery = query(collection(db, "posts"), orderBy("createdAt"), where("createdAt", "<", tenDaysAgo));
-      const postsSnapshot = await getDocs(postsQuery);
-
-      const batch = writeBatch(db);
-      postsSnapshot.forEach((doc) => {
-        batch.delete(doc.ref);
-      });
-
-      await batch.commit();
-    };
-
-    deleteOldPosts();
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col">
       <header className="flex items-center justify-between p-4">
@@ -781,7 +762,7 @@ function App() {
               transition={{ delay: 0.4 }}
             >
               {user ? '💥 You’re not here to play small. Let’s build greatness.' : '🔗 Meet collaborators. 💡 Spark ideas. 🏗️ Build your legacy.'}
-              
+
             </motion.p>
             {!user && (
               <motion.p
